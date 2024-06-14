@@ -1,7 +1,7 @@
 from ridingApp.RideSharingManagement import RideShareManagement
 
 rideShareManagement = RideShareManagement()
-
+print("-"*15+"Task 1: Onboard users and vehicles"+"-"*15)
 # add_user("Rohan, M, 36"); add_vehicle("Rohan, Swift, KA-01-12345")
 # add_user("Shashank, M, 29"); add_vehicle("Shashank, Baleno, TS-05-62395")
 # add_user("Nandini, F, 29")
@@ -70,6 +70,8 @@ rideShareManagement.add_user_vehicle(userDetails={
 ])
 
 
+print("-"*15+"Task 2: Offer Rides"+"-"*15)
+
 # User(id=1, name=Rohan, gender=M, age=36, rides_offered=0, rides_taken=0)
 # User(id=2, name=Shashank, gender=M, age=29, rides_offered=0, rides_taken=0)
 # User(id=3, name=Nandini, gender=F, age=29, rides_offered=0, rides_taken=0)
@@ -128,6 +130,7 @@ rideShareManagement.offer_ride(1,1,{
     "avail_seats":1
 })
 
+print("-"*15+"Task 3: Select Rides"+"-"*15)
 
 # select_ride("Nandini, Origin-Bangalore, Destination-Mysore, Seats-1, Most Vacant") (2(c) is the desired output)
 # select_ride("Gaurav, Origin-Bangalore, Destination-Mysore, Seats 1, Preferred Vehicle-Activa") (2(b) is the desired output)
@@ -169,6 +172,8 @@ rideShareManagement.select_ride(2,{
     "preferred_vehicle":"Polo"
 })
 
+print("-"*15+"Task 4: End Rides"+"-"*15)
+
 # end_ride (2-a)
 # end_ride (2-b)
 # end_ride (2-c)
@@ -178,6 +183,8 @@ rideShareManagement.end_ride(1)
 rideShareManagement.end_ride(2)
 rideShareManagement.end_ride(3)
 rideShareManagement.end_ride(4)
+
+print("-"*15+"Task 5: Print Stats"+"-"*15)
 
 for user in rideShareManagement.users.values():
     print(user)

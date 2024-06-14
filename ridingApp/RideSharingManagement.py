@@ -18,6 +18,7 @@ class RideShareManagement:
         new_user = User(self.next_user_id,userDetails)
         self.users[self.next_user_id] = new_user
         self.next_user_id += 1
+        print(f"Onboarded User : {new_user}")
         return new_user.id
 
 
@@ -25,6 +26,7 @@ class RideShareManagement:
         new_vehicle = Vehicle(self.next_vehicle_id, vehicleDetails, user_id)
         self.vehicles[self.next_vehicle_id] = new_vehicle
         self.next_vehicle_id += 1
+        print(f"Onboarded Vehicle : {new_vehicle}")
         return new_vehicle.id
 
 
@@ -77,5 +79,6 @@ class RideShareManagement:
     def end_ride(self, ride_id):
         if(ride_id in self.rides):
             del self.rides[ride_id]
+            print(f"Ended Ride with id : {ride_id}")
         else:
             print("Ride not found")

@@ -3,4 +3,4 @@ class Ride:
          self.id = id
          self.user_id = user_id
          self.origin = rideDetails["origin"]
-         self.destination = rideDetails["destination"]         
+         self.destination = rideDetails["destination"]
